@@ -97,3 +97,6 @@ body {
 ::placeholder {
     color: white;
 }
+.signin p, .signup p{ 
+   font-size: .8rem;
+}
