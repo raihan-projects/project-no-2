@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100dvh;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.outerbox{
+    height: 400px;
+    width: 300px;
+    border-radius: 15px;
+    perspective: 1000px;
+    
+}
+
+.innerbox {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border-radius: inherit;
+    transition: 1s ease;
+    transform-style: preserve-3d;
+    color: white;
+    box-shadow: 0 0 50px orangered;
+}
+.innerbox:target {
+    transform: rotateY(-180deg);
+}
+.signin, .signup {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    background: url("background.jpg");
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(10px);
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.signup {
+    transform: rotateY(180deg);
+}
+.signin {
+    
+}
+.input {
+    padding: .3rem;
+    margin: .5rem;
+    height: 1.4rem;
+    width: 70%;
+    color: white;
+    border: 1px solid white;
+    border-radius: .3rem;
+    background: transparent;
+    backdrop-filter: blur(3px);
+    transition: .5s ease;
+}
+.input:focus {
+    outline: none;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px #333;
+}
+.button {
+    height: 1.3rem;
+    width: 70%;
+    padding: .3rem;
+    box-sizing: content-box;
+    margin: 1rem;
+    font-size: 1.2rem;
+    border: 1px solid orangered;
+    border-radius: .3rem;
+    color: white;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 15px black;
+    transition: .5s ease;
+}
+.button:hover {
+    background: orangered;
+}
+.button:active {
+    scale: .9;
+}
+.flipbtn {
+    display: block;
+    text-align: center;
+    color: white;
+}
+::placeholder {
+    color: white;
+}
